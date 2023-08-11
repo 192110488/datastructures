@@ -1,4 +1,4 @@
- #include<stdio.h>
+  #include<stdio.h>
 int main()
 {
 	int n,a[30],b[n+1],i,o,in,el,p;
@@ -28,12 +28,14 @@ int main()
 				{
 					b[i]=a[i];
 				}
-				for(i=n-1;i>=p-1;i--)
+				for(i=p;i<=n;i++)
 				{
-					b[i+1]=a[i];
-					b[p-1]=el;
+					b[i]=a[i-1];
 				}
+				b[p]=el;
 			}
+			else printf("Invalid.");
+			printf("Resultant array after operation:");
 			for(i=0;i<=n;i++)
 			{
 				printf("%d,",b[i]);
@@ -49,11 +51,13 @@ int main()
 		  		{
 					b[i]=a[i];
 				}
-				for(i=p-1;i<n-1;i++)
+				for(i=p;i<n;i++)
 				{
 					b[i]=a[i+1];
 				}
 			}
+			else printf("Invalid.");
+			printf("Resultant array after operation:");
 			for(i=0;i<n-1;i++)
 			{
 				printf("%d,",b[i]);
